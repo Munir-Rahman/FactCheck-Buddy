@@ -12,36 +12,6 @@ app.use(express.json());
 app.use(cors());
 app.use(express.json());
 
-// OpenAI setup
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
-
-// ================== Chatbot Route ==================
-app.post("/chat", async (req, res) => {
-  const { message } = req.body;
-
-  if (!message) return res.status(400).json({ reply: "Message is required." });
-
-  try {
-    const completion = await openai.createChatCompletion({
-      model: "gpt-3.5-turbo",
-      messages: [
-        { role: "system", content: "You are FactCheck Buddy, provide accurate verified information." },
-        { role: "user", content: message },
-      ],
-      max_tokens: 200,
-    });
-
-    const reply = completion.data.choices[0].message?.content || "I don't know the answer.";
-    res.json({ reply });
-  } catch (error) {
-    console.error(error);
-    res.json({ reply: "❌ Something went wrong. Try again later." });
-  }
-});
-
 // Load local fact-checked claims dataset (JSON file)
 const DATA_FILE = path.join(__dirname, "factchecked.json");
 let factCheckedClaims = [];
