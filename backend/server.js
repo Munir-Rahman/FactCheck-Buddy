@@ -12,45 +12,6 @@ app.use(express.json());
 app.use(cors());
 app.use(express.json());
 
-// Load local fact-checked claims dataset (JSON file)
-const DATA_FILE = path.join(__dirname, "factchecked.json");
-let factCheckedClaims = [];
-
-// Load dataset at startup
-if (fs.existsSync(DATA_FILE)) {
-  const raw = fs.readFileSync(DATA_FILE, "utf-8");
-  factCheckedClaims = JSON.parse(raw);
-  console.log(`✅ Loaded ${factCheckedClaims.length} fact-checked claims`);
-} else {
-  console.log("⚠️ factchecked.json not found. Please add some claims.");
-}
-
-// API: Check claim against local dataset
-app.post("/api/check-claim", (req, res) => {
-  const { claim } = req.body;
-
-  if (!claim || claim.trim() === "") {
-    return res.status(400).json({ error: "Claim text is required" });
-  }
-
-  // Search local dataset
-  const match = factCheckedClaims.find(c =>
-    c.text.toLowerCase().includes(claim.toLowerCase())
-  );
-
-  if (match) {
-    return res.json({
-      verdict: match.verdict,         // true / false / unverified
-      confidence: match.confidence,   // e.g., 0.85
-      description: match.description,
-      sources: match.sources
-    });
-  }
-
-  // If not found in dataset, return "not found"
-  return res.json({ verdict: "unverified", description: "Claim not found in database.", sources: [] });
-});
-
 // 🔑 NYT API Key
 const NYT_API_KEY = process.env.NYT_API_KEY;
 
