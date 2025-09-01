@@ -7,9 +7,42 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-[#F9FAF8] text-[#1f2937];
+}
+.vibrate{
+  position: absolute;
+}
+.vibrate::after{
+    position: relative;
+    content: '';
+    border-left: 97.5vw solid black;
+    animation: cursor 1s infinite;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+@keyframes cursor{
+  0%,5%{
+    border-left: 97.5vw solid rgb(3, 147, 3);
+    
   }
+  5%,10%{
+
+  }
+  10%,15%{
+
+  }
+  15%,20%{
+
+  }
+  20%,25%{
+
+  }
+  25%,30%{
+
+  }
+  30%,35%{
+
+  }
+}
+.progress{
+  background-image: linear-gradient(90deg,yellow,yellow,green,green,green);
 }

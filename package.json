@@ -5,26 +5,48 @@
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
+    "start": "ts-node server.ts",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.7.1",
+    "axios": "^1.11.0",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "framer-motion": "^12.23.12",
+    "i18next": "^25.4.2",
+    "i18next-browser-languagedetector": "^8.2.0",
     "isbot": "^5.1.27",
+    "localstorage": "^1.0.1",
+    "lucide-react": "^0.542.0",
+    "nodemailer": "^7.0.6",
     "react": "^19.1.0",
+    "react-circular-progressbar": "^2.2.0",
+    "react-confetti": "^6.4.0",
     "react-dom": "^19.1.0",
-    "react-router": "^7.7.1"
+    "react-i18next": "^15.7.3",
+    "react-icons": "^5.5.0",
+    "react-router": "^7.7.1",
+    "react-router-dom": "^7.8.2",
+    "tailwind-variants": "^3.1.0"
   },
   "devDependencies": {
     "@react-router/dev": "^7.7.1",
     "@tailwindcss/vite": "^4.1.4",
+    "@types/express": "^5.0.3",
     "@types/node": "^20",
     "@types/react": "^19.1.2",
+    "@types/react-circular-progressbar": "^1.0.2",
     "@types/react-dom": "^19.1.2",
+    "@types/react-router-dom": "^5.3.3",
     "tailwindcss": "^4.1.4",
     "typescript": "^5.8.3",
     "vite": "^6.3.3",
+    "vite-plugin-pwa": "^1.0.3",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }
