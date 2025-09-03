@@ -28,15 +28,15 @@ const teamMembers = [
   },
   {
     name: "Zabihullah",
-    role: "Developer",
-    img: "./logo1.png",
-    description: `Zabihullah contributes to AI integration, backend development, and project implementation. He ensures smooth functionality of the platform.`
+    role: "Content Contributor - Computer Science 2nd Year Student at Benawa University",
+    img: "./zabih.jpg",
+    description: `Provided key lessons and insights on fake news, helping shape the educational content of the FactCheck Buddy project.`
   },
   {
     name: "Khalil Rahman",
-    role: "Developer",
-    img: "./logo1.png",
-    description: `Khalil focuses on frontend development, UI/UX design, and responsive layouts. He ensures the platform is user-friendly and visually appealing.`
+    role: "Multimedia Contributor - Engineering 3rd Year Student at Kandahar University",
+    img: "./Khalil.png",
+    description: `Created videos and recorded presentations for the FactCheck Buddy project, helping to visually communicate the project’s features and lessons.`
   }
 ];
 
