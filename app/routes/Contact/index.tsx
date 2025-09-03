@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+const BACKEND_URL = "https://factcheck-buddy-backend.onrender.com";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -18,11 +19,12 @@ export default function Contact() {
     setStatus({ type: "", message: "" });
 
     try {
-      const res = await fetch("http://localhost:5000/send-contact", {
+      const res = await fetch(`${BACKEND_URL}/send-contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+
 
       const data = await res.json();
       if (data.success) {
