@@ -13,12 +13,13 @@ interface News {
 export default function BreakingNews() {
   const [newsData, setNewsData] = useState<News[]>([]);
 
+  const BASE_URL = "https://factcheck-buddy-backend.onrender.com";
   useEffect(() => {
-  fetch("/api/news?section=home")
-    .then((res) => res.json())
-    .then((data) => setNewsData(data))
-    .catch((err) => console.error("Error fetching news:", err));
-}, []);
+    fetch(`${BASE_URL}/news/home`)
+      .then((res) => res.json())
+      .then((data) => setNewsData(data))
+      .catch((err) => console.error("Error fetching news:", err));
+  }, []);
 
 
   return (
