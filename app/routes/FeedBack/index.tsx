@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+const BACKEND_URL = "https://factcheck-buddy-backend.onrender.com";
 
 export default function FeedbackForm() {
   const [open, setOpen] = useState(false);
@@ -21,15 +22,16 @@ export default function FeedbackForm() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/send-feedback", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          rating,
-          feedbackText,
-          email: "munirrahman1717@gmail.com", // or dynamically get from user
-        }),
-      });
+      const res = await fetch(`${BACKEND_URL}/send-feedback`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+      rating,
+      feedbackText,
+      email: "munirrahman1717@gmail.com", // or dynamically get from user
+      }),
+    });
+
 
       const data = await res.json();
       if (data.success) {
