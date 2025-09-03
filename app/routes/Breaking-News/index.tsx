@@ -14,12 +14,11 @@ export default function BreakingNews() {
   const [newsData, setNewsData] = useState<News[]>([]);
 
   useEffect(() => {
-  fetch("http://localhost:5000/news/home") // 👈 must match backend route
+  fetch("/api/news?section=home")
     .then((res) => res.json())
     .then((data) => setNewsData(data))
     .catch((err) => console.error("Error fetching news:", err));
 }, []);
-
 
 
   return (
