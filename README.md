@@ -1,87 +1,68 @@
-# Welcome to React Router!
+📰 FactCheck Buddy
 
-A modern, production-ready template for building full-stack React applications using React Router.
+AI-Powered Fake News Detection & Media Literacy Platform
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+🚀 Overview
 
-## Features
+FactCheck Buddy is an AI-powered platform designed to help users detect fake news, verify claims, and promote media literacy. It combines real-time fact-checking with educational tools, empowering people to think critically about the information they consume and share.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+✨ Features
 
-## Getting Started
+🔍 AI Fact-Checking – Verify claims and detect misinformation in real time
 
-### Installation
+🎙️ Voice Input – Use speech for claims and chatbot interaction
 
-Install the dependencies:
+🤖 Chatbot Assistant – Get instant fact-checking guidance
 
-```bash
+📚 Media Literacy Lessons – Learn how to identify misinformation
+
+🧩 Interactive Quizzes – Test and improve media literacy skills
+
+🌐 User-Friendly Design – Accessible for students, educators, and the public
+
+🛠️ Tech Stack
+
+Frontend: HTML, CSS, JavaScript
+
+Backend: Node.js / Express
+
+APIs & AI: OpenAI / Custom ML models (for fact-checking)
+
+Other Tools: Axios, Fetch API, Voice Recognition
+
+🎯 Mission
+
+To create a more informed and responsible digital society by bridging the gap between technology and social awareness.
+
+📸 Screenshots (Optional)
+
+Add images or GIFs of your project UI here.
+
+📂 Installation & Setup
+# Clone the repository
+git clone https://github.com/yourusername/factcheck-buddy.git
+
+# Navigate to project folder
+cd factcheck-buddy
+
+# Install dependencies
 npm install
-```
 
-### Development
+# Start the server
+npm start
 
-Start the development server with HMR:
+📌 Usage
 
-```bash
-npm run dev
-```
+Enter or speak a claim to verify
 
-Your application will be available at `http://localhost:5173`.
+Get instant AI-powered results
 
-## Building for Production
+Explore lessons & quizzes to improve media literacy
 
-Create a production build:
+🤝 Contributing
 
-```bash
-npm run build
-```
+Contributions are welcome! Feel free to fork the repo, create a branch, and submit a pull request.
 
-## Deployment
+📄 License
 
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+This project is licensed under the MIT License.
