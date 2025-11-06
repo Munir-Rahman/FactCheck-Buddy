@@ -24,7 +24,9 @@ const teamMembers = [
     name: "Munir Rahman Rahmani",
     role: "Team Leader – Full-Stack Web Developer and Database Developer, High School Graduate Student",
     img: "./Munir_Rahman.jpg",
-    description: `Munir is the visionary behind FactCheck Buddy, leading development and design. He specializes in frontend and backend development and AI integration for media literacy tools.`
+    description: `Munir Rahman Rahmani is the founder and team leader of FactCheck Buddy, an AI-powered platform promoting media literacy and combating misinformation. 
+He leads the project’s development and design, specializing in full-stack web development, database management, and AI integration to create practical tools for verifying news and educational content. 
+Munir is committed to using technology to empower youth with critical thinking and media literacy skills.`
   },
   {
     name: "Zabihullah",
