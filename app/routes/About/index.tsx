@@ -22,7 +22,7 @@ const projectInfo = [
 const teamMembers = [
   {
     name: "Munir Rahman Rahmani",
-    role: "Team Leader – Computer Science 2nd Year Student at Benawa University",
+    role: "Team Leader – Full-Stack Web Developer and Database Developer",
     img: "./Munir_Rahman.jpg",
     description: `Munir is the visionary behind FactCheck Buddy, leading development and design. He specializes in frontend and backend development and AI integration for media literacy tools.`
   },
@@ -74,7 +74,7 @@ export default function About() {
             className="bg-gray-50 rounded-2xl shadow-md border hover:shadow-lg transition duration-300 flex flex-col"
           >
             <div className="w-full h-64 overflow-hidden rounded-t-2xl">
-              <img src={member.img} alt={member.name} className="w-full h-full object-contain"/>
+              <img src={member.img} alt={member.name} className="w-full h-full object-cover"/>
             </div>
             <div className="p-6 flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-blue-600">{member.name}</h3>
