@@ -76,7 +76,7 @@ export default function About() {
             className="bg-gray-50 rounded-2xl shadow-md border hover:shadow-lg transition duration-300 flex flex-col"
           >
             <div className="w-full h-64  overflow-hidden rounded-t-2xl">
-              <img src={member.img} alt={member.name} className="w-full h-full object-cover object-center"/>
+              <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top"/>
             </div>
             <div className="p-6 flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-blue-600">{member.name}</h3>
