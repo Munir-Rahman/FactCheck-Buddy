@@ -75,7 +75,7 @@ export default function About() {
             key={idx} 
             className="bg-gray-50 rounded-2xl shadow-md border hover:shadow-lg transition duration-300 flex flex-col"
           >
-            <div className="w-full h-64 aspect-w-4 aspect-h-3 overflow-hidden rounded-t-2xl">
+            <div className="w-full h-64  overflow-hidden rounded-t-2xl">
               <img src={member.img} alt={member.name} className="w-full h-full object-cover object-center"/>
             </div>
             <div className="p-6 flex flex-col justify-center">
